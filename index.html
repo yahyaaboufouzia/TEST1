@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SolSmart — Recommandation Agricole</title>
+<title>SolSmart — Aboufouzia Mohamed Yahya</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -22,25 +22,16 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'DM Mono',monospace;
-  font-size:14px;line-height:1.6;
-  min-height:100vh;
-}
-.wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:14px;line-height:1.6;min-height:100vh}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 80px}
 
-header{
-  padding:48px 0 32px;
-  border-bottom:1px solid var(--border);
-  margin-bottom:44px;
-  display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;
-}
+header{padding:48px 0 32px;border-bottom:1px solid var(--border);margin-bottom:44px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .logo{font-family:'Fraunces',serif;font-size:52px;font-weight:600;color:var(--green);letter-spacing:-2px;line-height:1}
 .logo em{color:var(--amber);font-style:normal}
 .tagline{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:5px}
-.badges{display:flex;gap:8px;flex-wrap:wrap}
+.author{font-size:12px;color:var(--green);margin-top:4px;letter-spacing:.05em}
+.author span{color:var(--muted)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-start}
 .badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--border2);border-radius:20px;color:var(--green);background:rgba(82,201,122,.05)}
 
 .form-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:28px;margin-bottom:20px}
@@ -53,12 +44,7 @@ header{
 .sym{font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--green);line-height:1}
 .param-name{font-size:12px;color:var(--text)}
 .unit{font-size:11px;color:var(--muted)}
-.param-input{
-  width:100%;background:var(--bg3);border:1px solid var(--border);
-  border-radius:6px;padding:10px 14px;color:var(--text);
-  font-family:'DM Mono',monospace;font-size:22px;font-weight:500;
-  outline:none;transition:border-color .2s,box-shadow .2s;
-}
+.param-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text);font-family:'DM Mono',monospace;font-size:22px;font-weight:500;outline:none;transition:border-color .2s,box-shadow .2s}
 .param-input:focus{border-color:var(--green2);box-shadow:0 0 0 3px rgba(82,201,122,.08)}
 input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 input[type=number]{-moz-appearance:textfield}
@@ -66,14 +52,7 @@ input[type=number]{-moz-appearance:textfield}
 .status-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;transition:background .3s}
 .status-label{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;transition:color .3s}
 
-.btn{
-  width:100%;padding:17px;background:var(--bg3);
-  border:1px solid var(--green2);border-radius:8px;
-  color:var(--green);font-family:'DM Mono',monospace;
-  font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all .2s;position:relative;overflow:hidden;
-}
+.btn{width:100%;padding:17px;background:var(--bg3);border:1px solid var(--green2);border-radius:8px;color:var(--green);font-family:'DM Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s;position:relative;overflow:hidden}
 .btn::before{content:'';position:absolute;inset:0;background:var(--green2);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:0}
 .btn:hover::before{transform:scaleX(1)}
 .btn:hover{color:#fff;border-color:var(--green)}
@@ -97,8 +76,10 @@ input[type=number]{-moz-appearance:textfield}
 .corr-arrow{color:var(--amber);flex-shrink:0}
 
 .sec-title{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-.crops-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;margin-bottom:32px}
-.crop-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:transform .15s,border-color .2s;animation:fadeUp .4s ease both}
+
+/* CROPS */
+.crops-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:32px}
+.crop-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;transition:transform .15s,border-color .2s;animation:fadeUp .4s ease both}
 .crop-card:hover{transform:translateY(-3px);border-color:var(--border2)}
 .crop-card.top{background:rgba(82,201,122,.05);border-color:rgba(82,201,122,.3)}
 .crop-rank{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
@@ -106,23 +87,41 @@ input[type=number]{-moz-appearance:textfield}
 .score-bar{height:2px;background:rgba(82,201,122,.15);border-radius:2px;margin-bottom:10px;overflow:hidden}
 .score-fill{height:100%;border-radius:2px;background:var(--green)}
 .crop-name{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--text);margin-bottom:2px}
-.crop-variety{font-size:11px;color:var(--muted);margin-bottom:8px}
-.crop-raison{font-size:11px;color:var(--text);opacity:.65;line-height:1.5;margin-bottom:8px}
+.crop-variety{font-size:11px;color:var(--muted);margin-bottom:10px}
+.crop-reasoning{background:var(--bg3);border-radius:6px;padding:10px 12px;margin-bottom:10px}
+.crop-reasoning-title{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.crop-reasoning-row{display:flex;justify-content:space-between;align-items:center;font-size:11px;padding:3px 0;border-bottom:1px solid rgba(82,201,122,.06)}
+.crop-reasoning-row:last-child{border-bottom:none}
+.crop-reasoning-label{color:var(--muted)}
+.crop-reasoning-val{font-weight:500}
 .soil-tag{display:inline-block;font-size:10px;padding:3px 9px;border:1px solid var(--border);border-radius:20px;color:var(--muted)}
 
-.agri-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:40px}
-.agri-card{border:1px solid var(--border);border-radius:8px;padding:18px;animation:fadeUp .4s ease both}
+/* AGRI TYPES */
+.agri-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:40px}
+.agri-card{border:1px solid var(--border);border-radius:8px;padding:20px;animation:fadeUp .4s ease both}
 .agri-card.ok{background:rgba(82,201,122,.04);border-color:rgba(82,201,122,.25)}
 .agri-card.no{opacity:.4}
 .agri-status{font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin-bottom:6px}
-.agri-name{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--text);margin-bottom:5px}
-.agri-desc{font-size:12px;color:var(--text);opacity:.6;line-height:1.5;margin-bottom:10px}
+.agri-name{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--text);margin-bottom:6px}
+.agri-desc{font-size:12px;color:var(--text);opacity:.6;line-height:1.5;margin-bottom:12px}
+
+/* RAISONNEMENT DÉTAILLÉ */
+.agri-reasoning{background:var(--bg3);border-radius:6px;padding:12px;margin-bottom:12px}
+.agri-reasoning-title{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.reasoning-row{display:grid;grid-template-columns:60px 1fr auto;gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid rgba(82,201,122,.06);font-size:11px}
+.reasoning-row:last-child{border-bottom:none}
+.r-param{color:var(--muted);font-weight:500}
+.r-bar-wrap{height:4px;background:rgba(82,201,122,.1);border-radius:4px;overflow:hidden}
+.r-bar{height:100%;border-radius:4px;transition:width .6s ease}
+.r-status{font-size:10px;font-weight:500;text-align:right;min-width:48px}
+
 .agri-tag{display:inline-block;font-size:10px;padding:3px 10px;border-radius:20px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
 .agri-tag.yes{background:rgba(82,201,122,.12);color:var(--green);border:1px solid rgba(82,201,122,.25)}
 .agri-tag.no{background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--border)}
 
 footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 footer a{color:var(--green);text-decoration:none}
+.footer-author{color:var(--green);font-weight:500}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
@@ -134,6 +133,7 @@ footer a{color:var(--green);text-decoration:none}
     <div>
       <div class="logo">Sol<em>Smart</em></div>
       <div class="tagline">Recommandation agricole intelligente</div>
+      <div class="author"><span>Développé par </span>Aboufouzia Mohamed Yahya</div>
     </div>
     <div class="badges">
       <span class="badge">Dataset NPK · Kaggle</span>
@@ -204,209 +204,313 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 
   <div id="results">
-    <div class="divider"><span>Résultats</span></div>
+    <div class="divider"><span>Résultats — Aboufouzia Mohamed Yahya</span></div>
     <div id="profil-block"></div>
     <div id="conseil-block"></div>
     <div id="corrections-block"></div>
-    <div class="sec-title">Cultures recommandées</div>
+    <div class="sec-title">Cultures recommandées — avec raisonnement NPK</div>
     <div class="crops-grid" id="crops-grid"></div>
-    <div class="sec-title">Types d'agriculture adaptés</div>
+    <div class="sec-title">Types d'agriculture — raisonnement détaillé par paramètre</div>
     <div class="agri-grid" id="agri-grid"></div>
   </div>
 
   <footer>
     <span>Source : <a href="https://www.kaggle.com/datasets/javakhan/crops-npk-data-set" target="_blank">Kaggle crops-npk data set</a> · Licence MIT · 20 000 enregistrements</span>
-    <span>SolSmart v2.0</span>
+    <span class="footer-author">Aboufouzia Mohamed Yahya · SolSmart v2.0</span>
   </footer>
 </div>
 
 <script>
 // ================================================================
-// BASE DE DONNÉES — extraite du dataset Kaggle NPK (20 000 records)
+// BASE DE DONNÉES — dataset Kaggle NPK (20 000 records)
 // ================================================================
 const DB = [
-  {nom:"Riz",         variete:"Basmati",      sol:"Argileux",   N:[60,110],  P:[30,60],  K:[25,55],  pH:[5.5,7.0], agri:["irriguée","intensive"]},
-  {nom:"Blé",         variete:"Durum",        sol:"Limoneux",   N:[80,140],  P:[40,80],  K:[30,65],  pH:[6.0,7.5], agri:["intensive","raisonnée"]},
-  {nom:"Maïs",        variete:"Hybride",      sol:"Limoneux",   N:[75,125],  P:[35,70],  K:[30,65],  pH:[5.8,7.2], agri:["intensive","raisonnée"]},
-  {nom:"Orge",        variete:"Standard",     sol:"Sableux",    N:[50,100],  P:[25,55],  K:[20,50],  pH:[6.0,8.0], agri:["extensive","raisonnée"]},
-  {nom:"Sorgho",      variete:"Standard",     sol:"Argileux",   N:[40,85],   P:[20,50],  K:[15,45],  pH:[5.5,8.5], agri:["extensive","sèche"]},
-  {nom:"Millet",      variete:"Perlé",        sol:"Sableux",    N:[30,70],   P:[15,45],  K:[15,40],  pH:[5.5,8.0], agri:["extensive","sèche"]},
-  {nom:"Tournesol",   variete:"Oléagineux",   sol:"Limoneux",   N:[55,110],  P:[30,70],  K:[28,65],  pH:[6.0,7.8], agri:["intensive","raisonnée"]},
-  {nom:"Coton",       variete:"Long fibres",  sol:"Argileux",   N:[80,145],  P:[40,85],  K:[40,85],  pH:[5.8,7.2], agri:["intensive"]},
-  {nom:"Arachide",    variete:"Runner",       sol:"Sableux",    N:[10,40],   P:[25,65],  K:[20,55],  pH:[5.5,7.0], agri:["raisonnée","bio"]},
-  {nom:"Canne à sucre",variete:"Standard",   sol:"Limoneux",   N:[100,180], P:[50,100], K:[55,110], pH:[6.0,7.5], agri:["intensive","irriguée"]},
-  {nom:"Lentille",    variete:"Verte",        sol:"Limoneux",   N:[10,40],   P:[30,70],  K:[20,60],  pH:[6.0,8.0], agri:["raisonnée","bio"]},
-  {nom:"Pois chiche", variete:"Desi",         sol:"Sableux",    N:[10,40],   P:[25,65],  K:[15,55],  pH:[5.5,8.5], agri:["extensive","bio"]},
-  {nom:"Haricot",     variete:"Commun",       sol:"Limoneux",   N:[10,50],   P:[30,70],  K:[20,60],  pH:[6.0,7.5], agri:["maraîchage","bio"]},
-  {nom:"Soja",        variete:"Standard",     sol:"Limoneux",   N:[10,45],   P:[35,80],  K:[30,75],  pH:[6.0,7.0], agri:["intensive","raisonnée"]},
-  {nom:"Tomate",      variete:"Roma",         sol:"Limoneux",   N:[80,145],  P:[40,95],  K:[55,120], pH:[5.5,7.0], agri:["maraîchage","serre"]},
-  {nom:"Pomme de terre",variete:"Rouge",      sol:"Sableux",    N:[80,145],  P:[40,90],  K:[65,130], pH:[5.0,6.5], agri:["maraîchage","intensive"]},
-  {nom:"Oignon",      variete:"Standard",     sol:"Sableux",    N:[50,100],  P:[25,65],  K:[30,70],  pH:[6.0,7.5], agri:["maraîchage"]},
-  {nom:"Piment",      variete:"Cayenne",      sol:"Limoneux",   N:[60,120],  P:[30,75],  K:[40,90],  pH:[6.0,7.0], agri:["maraîchage","serre"]},
-  {nom:"Pastèque",    variete:"Sans pépins",  sol:"Sableux",    N:[60,110],  P:[30,70],  K:[40,90],  pH:[6.0,7.0], agri:["maraîchage","irriguée"]},
-  {nom:"Melon",       variete:"Charentais",   sol:"Sableux",    N:[50,100],  P:[25,65],  K:[35,85],  pH:[6.0,7.5], agri:["maraîchage","irriguée"]},
-  {nom:"Carotte",     variete:"Nantaise",     sol:"Sableux",    N:[40,90],   P:[25,65],  K:[50,110], pH:[6.0,7.0], agri:["maraîchage","bio"]},
-  {nom:"Banane",      variete:"Cavendish",    sol:"Limoneux",   N:[80,155],  P:[30,80],  K:[65,145], pH:[5.5,7.0], agri:["intensive","irriguée"]},
-  {nom:"Mangue",      variete:"Alphonso",     sol:"Sableux",    N:[40,90],   P:[20,60],  K:[25,75],  pH:[5.5,7.5], agri:["arboriculture"]},
-  {nom:"Orange",      variete:"Navel",        sol:"Limoneux",   N:[60,125],  P:[25,70],  K:[45,105], pH:[5.5,7.0], agri:["arboriculture","irriguée"]},
-  {nom:"Olive",       variete:"Picholine",    sol:"Calcaire",   N:[20,60],   P:[10,40],  K:[15,55],  pH:[6.5,8.5], agri:["arboriculture","extensive"]},
-  {nom:"Raisin",      variete:"Vinifera",     sol:"Argileux",   N:[40,90],   P:[20,60],  K:[30,80],  pH:[5.5,7.5], agri:["arboriculture"]},
-  {nom:"Café",        variete:"Arabica",      sol:"Volcanique", N:[60,115],  P:[30,70],  K:[30,75],  pH:[5.0,6.5], agri:["arboriculture"]},
-  {nom:"Fraise",      variete:"Gariguette",   sol:"Sableux",    N:[50,100],  P:[30,70],  K:[40,90],  pH:[5.5,6.5], agri:["maraîchage","bio","serre"]},
-  {nom:"Lavande",     variete:"Fine",         sol:"Calcaire",   N:[10,40],   P:[10,35],  K:[10,35],  pH:[6.5,8.5], agri:["extensive","bio"]},
+  {nom:"Riz",          variete:"Basmati",     sol:"Argileux",  N:[60,110],  P:[30,60],  K:[25,55],  pH:[5.5,7.0]},
+  {nom:"Blé",          variete:"Durum",       sol:"Limoneux",  N:[80,140],  P:[40,80],  K:[30,65],  pH:[6.0,7.5]},
+  {nom:"Maïs",         variete:"Hybride",     sol:"Limoneux",  N:[75,125],  P:[35,70],  K:[30,65],  pH:[5.8,7.2]},
+  {nom:"Orge",         variete:"Standard",    sol:"Sableux",   N:[50,100],  P:[25,55],  K:[20,50],  pH:[6.0,8.0]},
+  {nom:"Sorgho",       variete:"Standard",    sol:"Argileux",  N:[40,85],   P:[20,50],  K:[15,45],  pH:[5.5,8.5]},
+  {nom:"Millet",       variete:"Perlé",       sol:"Sableux",   N:[30,70],   P:[15,45],  K:[15,40],  pH:[5.5,8.0]},
+  {nom:"Tournesol",    variete:"Oléagineux",  sol:"Limoneux",  N:[55,110],  P:[30,70],  K:[28,65],  pH:[6.0,7.8]},
+  {nom:"Coton",        variete:"Long fibres", sol:"Argileux",  N:[80,145],  P:[40,85],  K:[40,85],  pH:[5.8,7.2]},
+  {nom:"Arachide",     variete:"Runner",      sol:"Sableux",   N:[10,40],   P:[25,65],  K:[20,55],  pH:[5.5,7.0]},
+  {nom:"Canne à sucre",variete:"Standard",    sol:"Limoneux",  N:[100,180], P:[50,100], K:[55,110], pH:[6.0,7.5]},
+  {nom:"Lentille",     variete:"Verte",       sol:"Limoneux",  N:[10,40],   P:[30,70],  K:[20,60],  pH:[6.0,8.0]},
+  {nom:"Pois chiche",  variete:"Desi",        sol:"Sableux",   N:[10,40],   P:[25,65],  K:[15,55],  pH:[5.5,8.5]},
+  {nom:"Haricot",      variete:"Commun",      sol:"Limoneux",  N:[10,50],   P:[30,70],  K:[20,60],  pH:[6.0,7.5]},
+  {nom:"Soja",         variete:"Standard",    sol:"Limoneux",  N:[10,45],   P:[35,80],  K:[30,75],  pH:[6.0,7.0]},
+  {nom:"Tomate",       variete:"Roma",        sol:"Limoneux",  N:[80,145],  P:[40,95],  K:[55,120], pH:[5.5,7.0]},
+  {nom:"Pomme de terre",variete:"Rouge",      sol:"Sableux",   N:[80,145],  P:[40,90],  K:[65,130], pH:[5.0,6.5]},
+  {nom:"Oignon",       variete:"Standard",    sol:"Sableux",   N:[50,100],  P:[25,65],  K:[30,70],  pH:[6.0,7.5]},
+  {nom:"Piment",       variete:"Cayenne",     sol:"Limoneux",  N:[60,120],  P:[30,75],  K:[40,90],  pH:[6.0,7.0]},
+  {nom:"Pastèque",     variete:"Sans pépins", sol:"Sableux",   N:[60,110],  P:[30,70],  K:[40,90],  pH:[6.0,7.0]},
+  {nom:"Melon",        variete:"Charentais",  sol:"Sableux",   N:[50,100],  P:[25,65],  K:[35,85],  pH:[6.0,7.5]},
+  {nom:"Carotte",      variete:"Nantaise",    sol:"Sableux",   N:[40,90],   P:[25,65],  K:[50,110], pH:[6.0,7.0]},
+  {nom:"Banane",       variete:"Cavendish",   sol:"Limoneux",  N:[80,155],  P:[30,80],  K:[65,145], pH:[5.5,7.0]},
+  {nom:"Mangue",       variete:"Alphonso",    sol:"Sableux",   N:[40,90],   P:[20,60],  K:[25,75],  pH:[5.5,7.5]},
+  {nom:"Orange",       variete:"Navel",       sol:"Limoneux",  N:[60,125],  P:[25,70],  K:[45,105], pH:[5.5,7.0]},
+  {nom:"Olive",        variete:"Picholine",   sol:"Calcaire",  N:[20,60],   P:[10,40],  K:[15,55],  pH:[6.5,8.5]},
+  {nom:"Raisin",       variete:"Vinifera",    sol:"Argileux",  N:[40,90],   P:[20,60],  K:[30,80],  pH:[5.5,7.5]},
+  {nom:"Café",         variete:"Arabica",     sol:"Volcanique",N:[60,115],  P:[30,70],  K:[30,75],  pH:[5.0,6.5]},
+  {nom:"Fraise",       variete:"Gariguette",  sol:"Sableux",   N:[50,100],  P:[30,70],  K:[40,90],  pH:[5.5,6.5]},
+  {nom:"Lavande",      variete:"Fine",        sol:"Calcaire",  N:[10,40],   P:[10,35],  K:[10,35],  pH:[6.5,8.5]},
 ];
 
 const AGRI = [
-  {nom:"Agriculture intensive",    desc:"Rendements maximaux, sol riche et équilibré.",        req:{N:[70,300],P:[35,300],K:[30,300],pH:[5.8,7.5]}},
-  {nom:"Agriculture raisonnée",    desc:"Équilibre rendement et environnement.",               req:{N:[40,200],P:[20,200],K:[20,200],pH:[5.5,8.0]}},
-  {nom:"Agriculture biologique",   desc:"Sans intrants chimiques, matière organique élevée.",  req:{N:[10,120],P:[15,120],K:[10,100],pH:[5.5,7.8]}},
-  {nom:"Maraîchage",               desc:"Légumes et fruits, sol riche bien drainé.",           req:{N:[60,200],P:[30,150],K:[40,180],pH:[5.5,7.5]}},
-  {nom:"Agriculture extensive",    desc:"Grandes surfaces, peu d'intrants, sol pauvre accepté.",req:{N:[0,100], P:[0,80],  K:[0,80],  pH:[5.0,8.5]}},
-  {nom:"Arboriculture",            desc:"Arbres fruitiers, sol bien structuré.",               req:{N:[20,140],P:[10,100],K:[15,120],pH:[5.0,8.5]}},
-  {nom:"Culture sous serre",       desc:"Contrôle total, haute intensité de production.",      req:{N:[60,200],P:[30,150],K:[45,180],pH:[5.5,7.0]}},
-  {nom:"Agriculture en zone sèche",desc:"Variétés résistantes à la sécheresse.",              req:{N:[0,90],  P:[0,70],  K:[0,60],  pH:[5.5,8.5]}},
-  {nom:"Agriculture irriguée",     desc:"Fort besoin en eau, sol à bonne rétention.",          req:{N:[50,250],P:[25,150],K:[30,180],pH:[5.5,7.8]}},
+  {
+    nom:"Agriculture intensive",
+    desc:"Rendements maximaux avec intrants élevés. Nécessite un sol riche et bien équilibré.",
+    req:{N:[70,300],P:[35,300],K:[30,300],pH:[5.8,7.5]},
+    seuils:{N:"≥ 70 mg/kg",P:"≥ 35 mg/kg",K:"≥ 30 mg/kg",pH:"5.8 – 7.5"}
+  },
+  {
+    nom:"Agriculture raisonnée",
+    desc:"Équilibre entre rendement et respect de l'environnement. Fertilisation optimisée.",
+    req:{N:[40,200],P:[20,200],K:[20,200],pH:[5.5,8.0]},
+    seuils:{N:"≥ 40 mg/kg",P:"≥ 20 mg/kg",K:"≥ 20 mg/kg",pH:"5.5 – 8.0"}
+  },
+  {
+    nom:"Agriculture biologique",
+    desc:"Sans intrants chimiques. Matière organique naturelle, légumineuses en rotation.",
+    req:{N:[10,120],P:[15,120],K:[10,100],pH:[5.5,7.8]},
+    seuils:{N:"10 – 120 mg/kg",P:"15 – 120 mg/kg",K:"10 – 100 mg/kg",pH:"5.5 – 7.8"}
+  },
+  {
+    nom:"Maraîchage",
+    desc:"Légumes et fruits en petites surfaces. Sol riche, bien drainé, arrosage régulier.",
+    req:{N:[60,200],P:[30,150],K:[40,180],pH:[5.5,7.5]},
+    seuils:{N:"≥ 60 mg/kg",P:"≥ 30 mg/kg",K:"≥ 40 mg/kg",pH:"5.5 – 7.5"}
+  },
+  {
+    nom:"Agriculture extensive",
+    desc:"Grandes surfaces, peu d'intrants. Convient aux sols pauvres ou arides.",
+    req:{N:[0,100],P:[0,80],K:[0,80],pH:[5.0,8.5]},
+    seuils:{N:"0 – 100 mg/kg",P:"0 – 80 mg/kg",K:"0 – 80 mg/kg",pH:"5.0 – 8.5"}
+  },
+  {
+    nom:"Arboriculture",
+    desc:"Arbres fruitiers. Sol bien structuré, drainage correct, pH adapté à l'espèce.",
+    req:{N:[20,140],P:[10,100],K:[15,120],pH:[5.0,8.5]},
+    seuils:{N:"20 – 140 mg/kg",P:"10 – 100 mg/kg",K:"15 – 120 mg/kg",pH:"5.0 – 8.5"}
+  },
+  {
+    nom:"Culture sous serre",
+    desc:"Contrôle total du climat. Sol ou substrat fertile, haute intensité de production.",
+    req:{N:[60,200],P:[30,150],K:[45,180],pH:[5.5,7.0]},
+    seuils:{N:"≥ 60 mg/kg",P:"≥ 30 mg/kg",K:"≥ 45 mg/kg",pH:"5.5 – 7.0"}
+  },
+  {
+    nom:"Agriculture en zone sèche",
+    desc:"Variétés résistantes à la sécheresse. Sol sableux, faible NPK acceptable.",
+    req:{N:[0,90],P:[0,70],K:[0,60],pH:[5.5,8.5]},
+    seuils:{N:"0 – 90 mg/kg",P:"0 – 70 mg/kg",K:"0 – 60 mg/kg",pH:"5.5 – 8.5"}
+  },
+  {
+    nom:"Agriculture irriguée",
+    desc:"Fort besoin en eau. Sol limoneux à argileux, bonne capacité de rétention.",
+    req:{N:[50,250],P:[25,150],K:[30,180],pH:[5.5,7.8]},
+    seuils:{N:"≥ 50 mg/kg",P:"≥ 25 mg/kg",K:"≥ 30 mg/kg",pH:"5.5 – 7.8"}
+  },
 ];
 
 // ================================================================
-// ALGORITHME DE RECOMMANDATION (score gaussien sur le dataset NPK)
+// ALGORITHME
 // ================================================================
-function score(val, lo, hi) {
-  const c = (lo + hi) / 2;
-  const e = (hi - lo) / 2 || 1;
-  const z = (val - c) / (e * 1.2);
-  return Math.exp(-0.5 * z * z);
+function scoreG(val, lo, hi) {
+  const c = (lo+hi)/2, e = (hi-lo)/2||1;
+  return Math.exp(-0.5*Math.pow((val-c)/(e*1.2),2));
 }
 
-function inRange(v, lo, hi) { return v >= lo && v <= hi; }
+function inRange(v,lo,hi){ return v>=lo && v<=hi; }
 
-function statut(val, f, m, b) {
-  if (val < f) return ['#c94040','Très faible'];
-  if (val < m) return ['#d4a017','Faible'];
-  if (val <= b) return ['#52c97a','Optimal'];
-  return ['#4ab3c9','Élevé'];
+function pctScore(val, lo, hi) {
+  if (inRange(val, lo, hi)) return 100;
+  const center = (lo+hi)/2;
+  const dist = val < lo ? lo-val : val-hi;
+  const span = (hi-lo)/2 || 1;
+  return Math.max(0, Math.round(100 - (dist/span)*40));
 }
 
-function updateStatus() {
-  [
-    {id:'n',  val:+document.getElementById('n').value,  f:40,  m:80,  b:140},
-    {id:'p',  val:+document.getElementById('p').value,  f:20,  m:40,  b:90},
-    {id:'k',  val:+document.getElementById('k').value,  f:20,  m:40,  b:90},
-    {id:'ph', val:+document.getElementById('ph').value, f:5.5, m:6.0, b:7.5},
-  ].forEach(({id,val,f,m,b}) => {
-    const [c,l] = statut(val,f,m,b);
-    document.getElementById('dot-'+id).style.cssText = `background:${c};box-shadow:0 0 5px ${c}`;
-    Object.assign(document.getElementById('lbl-'+id), {textContent:l, style:`color:${c}`});
+function statusParam(val, lo, hi) {
+  if (val < lo) return {c:'#c94040', label:'Trop faible', ok:false};
+  if (val > hi) return {c:'#d4a017', label:'Trop élevé',  ok:false};
+  return             {c:'#52c97a', label:'Optimal',     ok:true};
+}
+
+function statut(val,f,m,b){
+  if(val<f) return['#c94040','Très faible'];
+  if(val<m) return['#d4a017','Faible'];
+  if(val<=b) return['#52c97a','Optimal'];
+  return['#4ab3c9','Élevé'];
+}
+
+function updateStatus(){
+  [{id:'n',val:+document.getElementById('n').value,f:40,m:80,b:140},
+   {id:'p',val:+document.getElementById('p').value,f:20,m:40,b:90},
+   {id:'k',val:+document.getElementById('k').value,f:20,m:40,b:90},
+   {id:'ph',val:+document.getElementById('ph').value,f:5.5,m:6.0,b:7.5}
+  ].forEach(({id,val,f,m,b})=>{
+    const[c,l]=statut(val,f,m,b);
+    document.getElementById('dot-'+id).style.cssText=`background:${c};box-shadow:0 0 5px ${c}`;
+    document.getElementById('lbl-'+id).textContent=l;
+    document.getElementById('lbl-'+id).style.color=c;
   });
 }
-
-['n','p','k','ph'].forEach(id => document.getElementById(id).addEventListener('input', updateStatus));
+['n','p','k','ph'].forEach(id=>document.getElementById(id).addEventListener('input',updateStatus));
 updateStatus();
 
-function genConseil(N, P, K, pH, topCulture) {
-  let c = `Votre sol présente `;
-  if (N >= 80 && P >= 40 && K >= 30 && pH >= 6.0 && pH <= 7.5)
-    c += `un excellent équilibre NPK. La culture de ${topCulture} est particulièrement adaptée à vos conditions actuelles. Vous pouvez envisager une rotation avec des légumineuses pour maintenir la fertilité.`;
-  else if (pH < 5.5)
-    c += `une acidité trop élevée qui limite l'absorption des nutriments. Un chaulage est prioritaire avant toute mise en culture. Une fois le pH corrigé, ${topCulture} sera une excellente option.`;
-  else if (N < 40)
-    c += `un déficit en azote. Introduisez des légumineuses en rotation ou apportez du compost pour enrichir naturellement le sol. ${topCulture} peut être cultivé en attendant l'amélioration.`;
-  else
-    c += `des paramètres corrects avec quelques ajustements à prévoir. ${topCulture} correspond bien à vos conditions. Un apport organique régulier améliorera progressivement la structure du sol.`;
-  return c;
+function genConseil(N,P,K,pH,top){
+  if(N>=80&&P>=40&&K>=30&&pH>=6.0&&pH<=7.5)
+    return `Votre sol présente un excellent équilibre NPK. La culture de ${top} est particulièrement adaptée à vos conditions. Envisagez une rotation avec des légumineuses pour maintenir la fertilité à long terme.`;
+  if(pH<5.5)
+    return `L'acidité élevée de votre sol (pH ${pH}) est le facteur limitant principal — elle bloque l'absorption des nutriments. Un chaulage est prioritaire avant toute mise en culture. Une fois le pH corrigé entre 6.0 et 7.0, ${top} sera une excellente option.`;
+  if(N<40)
+    return `Votre déficit en azote (${N} mg/kg) limite la croissance végétative. Introduisez des légumineuses en rotation (pois chiches, lentilles) ou apportez 2–4 t/ha de compost. ${top} peut être cultivé en attendant l'amélioration du sol.`;
+  if(K<20)
+    return `Le potassium est insuffisant (${K} mg/kg), ce qui peut affecter la qualité des fruits et la résistance aux maladies. Un apport de sulfate de potasse est recommandé. ${top} reste adapté à vos conditions actuelles.`;
+  return `Votre sol présente des paramètres corrects avec quelques ajustements à prévoir. ${top} correspond bien à vos conditions. Des apports organiques réguliers amélioreront progressivement la structure et la fertilité du sol.`;
 }
 
-function analyser() {
-  const N  = parseFloat(document.getElementById('n').value);
-  const P  = parseFloat(document.getElementById('p').value);
-  const K  = parseFloat(document.getElementById('k').value);
-  const pH = parseFloat(document.getElementById('ph').value);
+function analyser(){
+  const N=parseFloat(document.getElementById('n').value);
+  const P=parseFloat(document.getElementById('p').value);
+  const K=parseFloat(document.getElementById('k').value);
+  const pH=parseFloat(document.getElementById('ph').value);
 
-  if ([N,P,K,pH].some(isNaN) || pH < 4.5 || pH > 8.5) {
+  if([N,P,K,pH].some(isNaN)||pH<4.5||pH>8.5){
     alert('Veuillez entrer des valeurs valides (pH entre 4.5 et 8.5).');
     return;
   }
 
   // Scores cultures
-  const scored = DB.map(c => ({
+  const scored = DB.map(c=>({
     ...c,
-    pct: Math.round((score(N,c.N[0],c.N[1])*.30 + score(P,c.P[0],c.P[1])*.22 + score(K,c.K[0],c.K[1])*.18 + score(pH,c.pH[0],c.pH[1])*.30) * 100)
-  })).sort((a,b) => b.pct - a.pct);
+    pct:Math.round((scoreG(N,c.N[0],c.N[1])*.30+scoreG(P,c.P[0],c.P[1])*.22+scoreG(K,c.K[0],c.K[1])*.18+scoreG(pH,c.pH[0],c.pH[1])*.30)*100),
+    sN: pctScore(N,c.N[0],c.N[1]),
+    sP: pctScore(P,c.P[0],c.P[1]),
+    sK: pctScore(K,c.K[0],c.K[1]),
+    sPH:pctScore(pH,c.pH[0],c.pH[1]),
+  })).sort((a,b)=>b.pct-a.pct);
 
-  const top = scored.slice(0, 8);
-  const topScore = top[0].pct;
+  const top=scored.slice(0,8);
+  const topScore=top[0].pct;
 
   // Profil
-  let profil;
-  if (topScore >= 80)      profil = {titre:'Sol fertile — Agriculture intensive possible',     desc:`Excellent équilibre NPK (N:${N} P:${P} K:${K} mg/kg, pH:${pH}). Vos conditions sont idéales pour une large gamme de cultures à haute valeur ajoutée.`, niveau:'excellent'};
-  else if (topScore >= 60) profil = {titre:'Sol équilibré — Agriculture raisonnée',            desc:`Votre sol (N:${N} P:${P} K:${K} mg/kg, pH:${pH}) est globalement correct. Des ajustements ciblés peuvent optimiser les rendements.`, niveau:'bon'};
-  else if (topScore >= 40) profil = {titre:'Sol moyen — Cultures rustiques conseillées',       desc:`Paramètres (N:${N} P:${P} K:${K} mg/kg, pH:${pH}) dans les limites mais perfectibles. Privilégiez les cultures robustes.`, niveau:'moyen'};
-  else                     profil = {titre:'Sol appauvri — Régénération nécessaire',           desc:`Vos paramètres (N:${N} P:${P} K:${K} mg/kg, pH:${pH}) limitent fortement les options. Un plan d'amendement est indispensable.`, niveau:'pauvre'};
+  const profilData=
+    topScore>=80?{titre:'Sol fertile — Agriculture intensive possible',   desc:`Excellent équilibre NPK (N:${N} · P:${P} · K:${K} mg/kg · pH:${pH}). Vos conditions sont idéales pour une large gamme de cultures à haute valeur ajoutée.`,niveau:'excellent'}:
+    topScore>=60?{titre:'Sol équilibré — Agriculture raisonnée',          desc:`Votre sol (N:${N} · P:${P} · K:${K} mg/kg · pH:${pH}) est globalement correct. Des ajustements ciblés peuvent optimiser les rendements.`,niveau:'bon'}:
+    topScore>=40?{titre:'Sol moyen — Cultures rustiques conseillées',     desc:`Paramètres (N:${N} · P:${P} · K:${K} mg/kg · pH:${pH}) dans les limites mais perfectibles. Privilégiez les cultures robustes.`,niveau:'moyen'}:
+                 {titre:'Sol appauvri — Régénération nécessaire',         desc:`Vos paramètres (N:${N} · P:${P} · K:${K} mg/kg · pH:${pH}) limitent fortement les options. Un plan d'amendement est indispensable.`,niveau:'pauvre'};
 
-  const cfgs = {
+  const cfgs={
     excellent:{c:'#52c97a',bg:'rgba(82,201,122,.06)',bc:'rgba(82,201,122,.3)',icon:'◈'},
     bon:      {c:'#4ab3c9',bg:'rgba(74,179,201,.06)',bc:'rgba(74,179,201,.3)',icon:'◇'},
     moyen:    {c:'#d4a017',bg:'rgba(212,160,23,.06)', bc:'rgba(212,160,23,.3)', icon:'△'},
     pauvre:   {c:'#c94040',bg:'rgba(201,64,64,.06)',  bc:'rgba(201,64,64,.3)',  icon:'○'},
   };
-  const cfg = cfgs[profil.niveau];
+  const cfg=cfgs[profilData.niveau];
 
-  document.getElementById('profil-block').innerHTML = `
+  document.getElementById('profil-block').innerHTML=`
     <div class="profil" style="background:${cfg.bg};border-color:${cfg.bc}">
       <div class="profil-icon" style="color:${cfg.c}">${cfg.icon}</div>
       <div>
-        <div class="profil-title" style="color:${cfg.c}">${profil.titre}</div>
-        <div class="profil-desc">${profil.desc}</div>
+        <div class="profil-title" style="color:${cfg.c}">${profilData.titre}</div>
+        <div class="profil-desc">${profilData.desc}</div>
       </div>
     </div>`;
 
-  // Conseil
-  document.getElementById('conseil-block').innerHTML = `
+  document.getElementById('conseil-block').innerHTML=`
     <div class="conseil">💬 ${genConseil(N,P,K,pH,top[0].nom)}</div>`;
 
   // Corrections
-  const corrs = [];
-  if (N < 40)   corrs.push('Azote très faible — apporter urée (46-0-0) ou fumier décomposé : 2–4 t/ha');
-  if (N > 160)  corrs.push('Azote excessif — réduire les engrais azotés, risque de brûlures');
-  if (P < 20)   corrs.push('Phosphore insuffisant — apporter superphosphate simple (0-20-0)');
-  if (P > 150)  corrs.push('Phosphore très élevé — risque de blocage du zinc et du fer');
-  if (K < 20)   corrs.push('Potassium faible — apporter sulfate de potasse (0-0-50)');
-  if (K > 160)  corrs.push('Potassium élevé — peut bloquer l\'absorption du magnésium');
-  if (pH < 5.5) corrs.push('pH acide — chaulage : 2–4 t/ha de calcaire agricole ou dolomie');
-  if (pH > 8.0) corrs.push('pH basique — apport de soufre élémentaire (200–400 kg/ha)');
+  const corrs=[];
+  if(N<40)   corrs.push('Azote très faible — apporter urée (46-0-0) ou fumier décomposé : 2–4 t/ha');
+  if(N>160)  corrs.push('Azote excessif — réduire les engrais azotés, risque de brûlures foliaires');
+  if(P<20)   corrs.push('Phosphore insuffisant — apporter superphosphate simple (0-20-0)');
+  if(P>150)  corrs.push('Phosphore très élevé — risque de blocage du zinc et du fer');
+  if(K<20)   corrs.push('Potassium faible — apporter sulfate de potasse (0-0-50)');
+  if(K>160)  corrs.push('Potassium élevé — peut bloquer l\'absorption du magnésium');
+  if(pH<5.5) corrs.push('pH acide — chaulage : 2–4 t/ha de calcaire agricole ou dolomie');
+  if(pH>8.0) corrs.push('pH basique — apport de soufre élémentaire (200–400 kg/ha)');
 
-  document.getElementById('corrections-block').innerHTML = corrs.length ? `
+  document.getElementById('corrections-block').innerHTML=corrs.length?`
     <div class="corrections">
       <div class="corr-title">Corrections à apporter</div>
       ${corrs.map(c=>`<div class="corr-item"><span class="corr-arrow">→</span><span>${c}</span></div>`).join('')}
-    </div>` : '';
+    </div>`:'';
 
-  // Cultures
-  const ranks = ['★ Meilleur choix','2e','3e','4e','5e','6e','7e','8e'];
-  document.getElementById('crops-grid').innerHTML = top.map((c,i) => `
+  // Cultures avec raisonnement NPK
+  const ranks=['★ Meilleur choix','2e','3e','4e','5e','6e','7e','8e'];
+
+  function barColor(pct){ return pct>=80?'#52c97a':pct>=50?'#d4a017':'#c94040'; }
+
+  document.getElementById('crops-grid').innerHTML=top.map((c,i)=>`
     <div class="crop-card ${i===0?'top':''}" style="animation-delay:${i*.06}s">
       <div class="crop-rank">${ranks[i]}</div>
       <div class="crop-pct">${c.pct}% compatible</div>
       <div class="score-bar"><div class="score-fill" style="width:${c.pct}%"></div></div>
       <div class="crop-name">${c.nom}</div>
       <div class="crop-variety">${c.variete}</div>
-      <div class="crop-raison">Compatible avec vos paramètres NPK et pH actuels</div>
+      <div class="crop-reasoning">
+        <div class="crop-reasoning-title">Raisonnement par paramètre</div>
+        <div class="crop-reasoning-row">
+          <span class="crop-reasoning-label">N (Azote)</span>
+          <div class="r-bar-wrap"><div class="r-bar" style="width:${c.sN}%;background:${barColor(c.sN)}"></div></div>
+          <span class="r-status" style="color:${barColor(c.sN)}">${c.sN}%</span>
+        </div>
+        <div class="crop-reasoning-row">
+          <span class="crop-reasoning-label">P (Phosphore)</span>
+          <div class="r-bar-wrap"><div class="r-bar" style="width:${c.sP}%;background:${barColor(c.sP)}"></div></div>
+          <span class="r-status" style="color:${barColor(c.sP)}">${c.sP}%</span>
+        </div>
+        <div class="crop-reasoning-row">
+          <span class="crop-reasoning-label">K (Potassium)</span>
+          <div class="r-bar-wrap"><div class="r-bar" style="width:${c.sK}%;background:${barColor(c.sK)}"></div></div>
+          <span class="r-status" style="color:${barColor(c.sK)}">${c.sK}%</span>
+        </div>
+        <div class="crop-reasoning-row">
+          <span class="crop-reasoning-label">pH</span>
+          <div class="r-bar-wrap"><div class="r-bar" style="width:${c.sPH}%;background:${barColor(c.sPH)}"></div></div>
+          <span class="r-status" style="color:${barColor(c.sPH)}">${c.sPH}%</span>
+        </div>
+      </div>
       <span class="soil-tag">Sol ${c.sol}</span>
     </div>`).join('');
 
-  // Types agri
-  document.getElementById('agri-grid').innerHTML = AGRI.map((t,i) => {
-    const ok = inRange(N,t.req.N[0],t.req.N[1]) && inRange(P,t.req.P[0],t.req.P[1]) && inRange(K,t.req.K[0],t.req.K[1]) && inRange(pH,t.req.pH[0],t.req.pH[1]);
+  // Types agriculture avec raisonnement détaillé
+  document.getElementById('agri-grid').innerHTML=AGRI.map((t,i)=>{
+    const okN=inRange(N,t.req.N[0],t.req.N[1]);
+    const okP=inRange(P,t.req.P[0],t.req.P[1]);
+    const okK=inRange(K,t.req.K[0],t.req.K[1]);
+    const okPH=inRange(pH,t.req.pH[0],t.req.pH[1]);
+    const ok=okN&&okP&&okK&&okPH;
+    const params=[
+      {label:'N (Azote)',    val:N,   ok:okN,  seuil:t.seuils.N},
+      {label:'P (Phosphore)',val:P,   ok:okP,  seuil:t.seuils.P},
+      {label:'K (Potassium)',val:K,   ok:okK,  seuil:t.seuils.K},
+      {label:'pH',           val:pH,  ok:okPH, seuil:t.seuils.pH},
+    ];
     return `
     <div class="agri-card ${ok?'ok':'no'}" style="animation-delay:${i*.05}s">
-      <div class="agri-status" style="color:${ok?'#52c97a':'#6a8f6e'}">${ok?'✓ Recommandé':'Non adapté'}</div>
+      <div class="agri-status" style="color:${ok?'#52c97a':'#6a8f6e'}">${ok?'✓ Recommandé':'✗ Non adapté'}</div>
       <div class="agri-name">${t.nom}</div>
       <div class="agri-desc">${t.desc}</div>
-      <span class="agri-tag ${ok?'yes':'no'}">${ok?'Adapté':'Insuffisant'}</span>
+      <div class="agri-reasoning">
+        <div class="agri-reasoning-title">Pourquoi ce choix — analyse paramètre par paramètre</div>
+        ${params.map(p=>`
+        <div class="reasoning-row">
+          <span class="r-param">${p.label}</span>
+          <div style="font-size:11px;color:${p.ok?'#52c97a':'#c94040'}">
+            ${p.ok?'✓':'✗'} Votre valeur : <strong>${p.val}</strong> · Requis : ${p.seuil}
+          </div>
+          <span class="r-status" style="color:${p.ok?'#52c97a':'#c94040'}">${p.ok?'OK':'NON'}</span>
+        </div>`).join('')}
+      </div>
+      <span class="agri-tag ${ok?'yes':'no'}">${ok?'Toutes conditions remplies':'Conditions insuffisantes'}</span>
     </div>`;
   }).join('');
 
-  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').style.display='block';
   setTimeout(()=>document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'}),100);
 }
 </script>
